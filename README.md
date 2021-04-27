@@ -4,8 +4,6 @@
 
 > An instagram clone created with MongoDB, Express, React, and Socket.io
 
-<img src="https://heroku-badge.herokuapp.com/?app=instaclone-prod" alt='Heroku deploy status' />
-
 <a href="https://www.instaclone.net">Have a look at the live demo</a>
 
 ![Showcase GIF](/screenshots/NgmjOVkZ4L.gif)
@@ -28,7 +26,7 @@
 
 ### Clone
 
-- Clone this repo to your local machine using `https://github.com/Sandermoen/instaclone`
+- Clone this repo to your local machine using `https://github.com/yadavgaurav251/Politico`
 
 ### Setup
 
@@ -38,7 +36,7 @@
 $ npm install && cd client && npm install
 ```
 
-> Set up a MongoDB database either locally or provision a free database with <a href='https://www.mongodb.com/cloud/atlas'>`MongoDB Atlas`</a>
+> Set up a MongoDB database either locally ( <a href='https://docs.mongodb.com/manual/installation/'>`Installation Guide`</a> )
 
 > Create a free <a href="https://cloudinary.com/">`Cloudinary account`</a>
 
