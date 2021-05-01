@@ -59,24 +59,14 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
   return (
     <Fragment>
       <Card className="form-card">
-        <h1 className="heading-logo text-center">Instaclone</h1>
+        <h1 className="heading-logo text-center">Politico</h1>
         <h2
           style={{ fontSize: '1.7rem' }}
           className="heading-2 color-grey text-center"
         >
           Sign up to see photos and videos from your friends.
         </h2>
-        <GithubLoginButton
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '100%',
-            color: 'white',
-          }}
-          button
-        />
-        <Divider>OR</Divider>
+       
         {Object.keys(formik.errors).map((field) => {
           if (formik.touched[field]) {
             return (
@@ -156,7 +146,7 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
           </Link>
         </section>
       </Card>
-      <ViewOnGithubButton />
+      {/* <ViewOnGithubButton /> */}
     </Fragment>
   );
 };

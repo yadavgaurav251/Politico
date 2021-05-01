@@ -116,7 +116,7 @@ module.exports.sendEmail = async (to, subject, template) => {
     },
   });
   await transporter.sendMail({
-    from: '"Instaclone Support" <support@instaclone.net>',
+    from: '"Politico Support" <support@Politico.net>',
     to,
     subject,
     html: template,
