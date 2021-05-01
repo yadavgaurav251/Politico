@@ -39,7 +39,7 @@ const Footer = () => (
           icon="heart"
           style={{ display: 'inline-block', margin: '0 5px' }}
         />{' '}
-        BY SANDER MOEN
+        BY Anish | Gaurav | Kshitij
       </h4>
     </div>
   </footer>

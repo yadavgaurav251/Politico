@@ -36,7 +36,7 @@ const SmallFooter = () => {
           className="color-grey-2 icon--small"
           style={{ margin: '0 5px' }}
         />{' '}
-        by Sander Moen
+        by Anish | Gaurav | Kshitij
       </h5>
     </footer>
   );

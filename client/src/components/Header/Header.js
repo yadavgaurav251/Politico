@@ -10,6 +10,7 @@ import { selectCurrentUser } from '../../redux/user/userSelectors';
 import useScrollPositionThrottled from '../../hooks/useScrollPositionThrottled';
 
 import { ReactComponent as LogoCamera } from '../../assets/svg/logo-camera.svg';
+import { ReactComponent as Picon } from '../../assets/svg/politicologo.svg';
 import SearchBox from '../SearchBox/SearchBox';
 import NewPostButton from '../NewPost/NewPostButton/NewPostButton';
 import NotificationButton from '../Notification/NotificationButton/NotificationButton';
@@ -39,10 +40,11 @@ const Header = memo(({ currentUser }) => {
       <div className="header__content">
         <Link to="/" className="header__logo">
           <div className="header__logo-image">
-            <LogoCamera />
+            <Picon/>
+            {/* <LogoCamera /> */}
           </div>
           <div className="header__logo-header">
-            <h3 className="heading-logo">Instaclone</h3>
+            <h3 className="heading-logo">Politico</h3>
           </div>
         </Link>
         <SearchBox />
