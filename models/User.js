@@ -35,6 +35,9 @@ const UserSchema = new Schema({
   specialUser:{
     type: String,
   },
+  constituency:{
+    type: String
+  },
   avatar: String,
   bio: {
     type: String,

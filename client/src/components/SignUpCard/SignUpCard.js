@@ -45,7 +45,8 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
       fullName: '',
       username: '',
       password: '',
-      specialUser:'',
+      specialUser: '',
+      constituency: '',
     },
     validate,
     onSubmit: (values) =>
@@ -54,7 +55,8 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
         values.fullName,
         values.username,
         values.password,
-        values.specialUser
+        values.specialUser,
+        values.constituency
       ),
   });
 
@@ -68,7 +70,7 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
         >
           Sign up to see photos and videos from your friends.
         </h2>
-       
+
         {Object.keys(formik.errors).map((field) => {
           if (formik.touched[field]) {
             return (
@@ -109,18 +111,25 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
             type="password"
           />
           <FormInput
+            name="constituency"
+            fieldProps={formik.getFieldProps('constituency')}
+            placeholder="Constituency"
+
+          />
+          <FormInput
             name="specialUser"
             fieldProps={formik.getFieldProps('specialUser')}
             placeholder="Special User Code"
-            
+
           />
+          
           <Button
             loading={fetching}
             disabled={
               Object.keys(formik.touched).length === 0 ? true : !formik.isValid
             }
           >
-            
+
             Sign Up
           </Button>
           <p></p>
@@ -161,8 +170,8 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  signUpStart: (email, fullName, username, password, specialUser) =>
-    dispatch(signUpStart(email, fullName, username, password,specialUser)),
+  signUpStart: (email, fullName, username, password, specialUser,Constituency) =>
+    dispatch(signUpStart(email, fullName, username, password, specialUser,Constituency)),
 });
 
 const mapStateToProps = createStructuredSelector({
