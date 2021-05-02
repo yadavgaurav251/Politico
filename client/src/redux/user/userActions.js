@@ -56,12 +56,12 @@ export const githubSignInStart = (code) => async (dispatch) => {
   }
 };
 
-export const signUpStart = (email, fullName, username, password) => async (
+export const signUpStart = (email, fullName, username, password,specialUser) => async (
   dispatch
 ) => {
   try {
     dispatch({ type: userTypes.SIGN_IN_START });
-    const response = await registerUser(email, fullName, username, password);
+    const response = await registerUser(email, fullName, username, password,specialUser);
     dispatch(signInStart(null, null, response.token));
   } catch (err) {
     dispatch({ type: userTypes.SIGN_UP_FAILURE, payload: err.message });

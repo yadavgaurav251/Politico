@@ -45,6 +45,7 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
       fullName: '',
       username: '',
       password: '',
+      specialUser:'',
     },
     validate,
     onSubmit: (values) =>
@@ -52,7 +53,8 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
         values.email,
         values.fullName,
         values.username,
-        values.password
+        values.password,
+        values.specialUser
       ),
   });
 
@@ -106,12 +108,19 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
             valid={formik.touched.password && !formik.errors.password}
             type="password"
           />
+          <FormInput
+            name="specialUser"
+            fieldProps={formik.getFieldProps('specialUser')}
+            placeholder="Special User Code"
+            
+          />
           <Button
             loading={fetching}
             disabled={
               Object.keys(formik.touched).length === 0 ? true : !formik.isValid
             }
           >
+            
             Sign Up
           </Button>
           <p></p>
@@ -152,8 +161,8 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  signUpStart: (email, fullName, username, password) =>
-    dispatch(signUpStart(email, fullName, username, password)),
+  signUpStart: (email, fullName, username, password, specialUser) =>
+    dispatch(signUpStart(email, fullName, username, password,specialUser)),
 });
 
 const mapStateToProps = createStructuredSelector({

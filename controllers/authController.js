@@ -120,7 +120,7 @@ module.exports.loginAuthentication = async (req, res, next) => {
 };
 
 module.exports.register = async (req, res, next) => {
-  const { username, fullName, email, password } = req.body;
+  const { username, fullName, email, password, specialUser} = req.body;
   let user = null;
   let confirmationToken = null;
 
@@ -137,7 +137,7 @@ module.exports.register = async (req, res, next) => {
   if (passwordError) return res.status(400).send({ error: passwordError });
 
   try {
-    user = new User({ username, fullName, email, password });
+    user = new User({ username, fullName, email, password, specialUser });
     confirmationToken = new ConfirmationToken({
       user: user._id,
       token: crypto.randomBytes(20).toString('hex'),
@@ -148,6 +148,7 @@ module.exports.register = async (req, res, next) => {
       user: {
         email: user.email,
         username: user.username,
+        specialUser: specialUser
       },
       token: jwt.encode({ id: user._id }, process.env.JWT_SECRET),
     });

@@ -32,6 +32,9 @@ const UserSchema = new Schema({
     type: String,
     minlength: 8,
   },
+  specialUser:{
+    type: String,
+  },
   avatar: String,
   bio: {
     type: String,
