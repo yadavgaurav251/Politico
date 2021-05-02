@@ -122,7 +122,7 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
             placeholder="Special User Code"
 
           />
-          
+
           <Button
             loading={fetching}
             disabled={
@@ -170,8 +170,8 @@ const SignUpCard = ({ signUpStart, error, fetching }) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  signUpStart: (email, fullName, username, password, specialUser,Constituency) =>
-    dispatch(signUpStart(email, fullName, username, password, specialUser,Constituency)),
+  signUpStart: (email, fullName, username, password, specialUser, Constituency) =>
+    dispatch(signUpStart(email, fullName, username, password, specialUser, Constituency)),
 });
 
 const mapStateToProps = createStructuredSelector({

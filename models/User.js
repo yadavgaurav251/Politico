@@ -32,10 +32,10 @@ const UserSchema = new Schema({
     type: String,
     minlength: 8,
   },
-  specialUser:{
+  specialUser: {
     type: String,
   },
-  constituency:{
+  constituency: {
     type: String
   },
   avatar: String,
