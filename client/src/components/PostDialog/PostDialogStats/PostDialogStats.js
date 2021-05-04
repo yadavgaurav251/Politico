@@ -77,12 +77,12 @@ const PostDialogStats = ({
             }}
             toggledProps={[
               {
-                className: 'icon--button post-dialog__like color-red',
-                icon: 'heart',
+                className: 'icon--button post-dialog__like color-blue',
+                icon: 'thumbs-up',
               },
               {
                 className: 'icon--button post-dialog__like',
-                icon: 'heart-outline',
+                icon: 'thumbs-up-outline',
               },
             ]}
           />
@@ -100,8 +100,8 @@ const PostDialogStats = ({
           className="icon--button"
           icon="chatbubble-outline"
         />
-        <Icon className="icon--button" icon="paper-plane-outline" />
-        <Icon
+        {/* <Icon className="icon--button" icon="paper-plane-outline" /> */}
+        {/* <Icon
           className="icon--button"
           onClick={() => bookmarkPost(post._id, token)}
           icon={
@@ -112,7 +112,7 @@ const PostDialogStats = ({
                 ? 'bookmark'
                 : 'bookmark-outline'
               : 'bookmark-outline'
-          }
+          } */}
         />
       </div>
       <p className="heading-4">

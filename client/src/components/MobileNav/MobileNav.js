@@ -32,7 +32,7 @@ const MobileNav = ({ currentUser }) => {
           <Link to="/activity">
             <NotificationButton
               mobile
-              icon={pathname === '/activity' ? 'heart' : 'heart-outline'}
+              icon={pathname === '/activity' ? 'notifications' : 'notifications-outline'}
             />
           </Link>
         </li>
@@ -41,8 +41,8 @@ const MobileNav = ({ currentUser }) => {
             <Icon
               icon={
                 pathname === `/${currentUser.username}`
-                  ? 'person-circle'
-                  : 'person-circle-outline'
+                  ? 'person'
+                  : 'person-outline'
               }
             />
           </Link>

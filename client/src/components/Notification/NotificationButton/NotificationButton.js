@@ -73,7 +73,7 @@ const NotificationButton = ({
     <div style={{ position: 'relative', height: '100%' }}>
       <button className="notification-button">
         <Icon
-          icon={icon ? icon : showNotifications ? 'heart' : 'heart-outline'}
+          icon={icon ? icon : showNotifications ? 'notifications' : 'notifications-outline'}
           className={notificationState.unreadCount > 0 ? 'icon--unread' : ''}
           onClick={() =>
             !mobile && setShowNotifications((previous) => !previous)

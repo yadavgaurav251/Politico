@@ -53,7 +53,7 @@ const Header = memo(({ currentUser }) => {
             <Fragment>
               <Link to="/explore">
                 <Icon
-                  icon={pathname === '/explore' ? 'compass' : 'compass-outline'}
+                  icon={pathname === '/explore' ? 'home' : 'home-outline'}
                 />
               </Link>
               <NotificationButton />
@@ -61,8 +61,8 @@ const Header = memo(({ currentUser }) => {
                 <Icon
                   icon={
                     pathname === '/' + currentUser.username
-                      ? 'person-circle'
-                      : 'person-circle-outline'
+                      ? 'person'
+                      : 'person-outline'
                   }
                 />
               </Link>

@@ -36,7 +36,7 @@ const NewPostButton = ({ showModal, hideModal, plusIcon, children, style }) => {
         {children ? (
           children
         ) : (
-          <Icon icon={plusIcon ? 'add-circle-outline' : 'camera-outline'} />
+          <Icon icon={plusIcon ? 'image-outline' : 'image-outline'} />
         )}
       </label>
       <input

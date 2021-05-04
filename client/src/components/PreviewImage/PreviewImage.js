@@ -10,7 +10,7 @@ const PreviewImage = ({ onClick, image, likes, comments, filter }) => (
       <span className="preview-image__content">
         {likes > 0 && (
           <div className="preview-image__icon">
-            <Icon icon="heart" className="icon--white" />
+            <Icon icon="thumbs-up" className="icon--white" />
             <span>{likes}</span>
           </div>
         )}
