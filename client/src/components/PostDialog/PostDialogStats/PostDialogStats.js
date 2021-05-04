@@ -112,8 +112,8 @@ const PostDialogStats = ({
                 ? 'bookmark'
                 : 'bookmark-outline'
               : 'bookmark-outline'
-          } */}
-        />
+          }
+        /> */}
       </div>
       <p className="heading-4">
         {post.postVotes.length === 0 ? (
