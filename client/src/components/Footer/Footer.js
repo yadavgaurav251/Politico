@@ -1,4 +1,5 @@
 import React from 'react';
+import { ReactComponent as Flag } from '../../assets/svg/indiaflag.svg';
 
 import TextButton from '../Button/TextButton/TextButton';
 import Icon from '../Icon/Icon';
@@ -33,15 +34,16 @@ const Footer = () => (
         className="heading-4 color-grey font-bold"
         style={{ display: 'flex', alignItems: 'center' }}
       >
-        MADE WITH
+        Made In <Flag/>  With
         <Icon
           className="icon--small color-grey"
           icon="heart"
           style={{ display: 'inline-block', margin: '0 5px' }}
         />{' '}
-        BY Anish | Gaurav | Kshitij
+        By Anish | Gaurav | Kshitij
       </h4>
     </div>
+    
   </footer>
 );
 

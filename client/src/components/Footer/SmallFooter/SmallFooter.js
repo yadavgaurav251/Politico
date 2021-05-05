@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {ReactComponent as Flag} from '../../../assets/svg/indiaflag.svg'
 
 import Icon from '../../Icon/Icon';
 
@@ -30,7 +31,7 @@ const SmallFooter = () => {
         className="heading-5 color-grey-2 footer--small__copyright mt-lg font-bold"
         style={{ textTransform: 'uppercase ' }}
       >
-        Made with{' '}
+        Made in <Flag/> With {' '}
         <Icon
           icon="heart"
           className="color-grey-2 icon--small"
